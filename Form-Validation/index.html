@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./index.css"> 
+</head>
+<body>
+    <h1 class="heading">Registration Form</h1>
+    <form class="form" name="form">
+        <div class="fn-container">
+            <label class="name">First Name
+                <input type="text" data-key="fname" class="input" placeholder="Enter Name here">
+            </label>
+            <span data-error="fn-error" class="error-message">
+                Enter only alphabets
+            </span>
+            <span class="empty-field">*Please fill this field</span>
+        </div>
+
+        <div class="ln-container">
+            <label class="lname">Last Name
+                <input type="text" data-key="lname" class="input" placeholder="Enter last Name here">
+            </label>
+            <span class="error-message">
+                Enter only alphabets
+            </span>
+            <span data-error="ln-error" class="empty-field">*Please fill this field</span>
+        </div>
+
+        <div class="email-container">
+            <label class="email">Email
+                <input type="email" data-key="email" class="input" placeholder="Enter email id in form of name@example.com">
+            </label>
+            <span data-error="email-error" class="error-message">
+                Invalid email
+            </span>
+            <span class="empty-field">*Please fill this field</span>
+        </div>
+
+        <div class="phone-container">
+            <label class="phone">Phone number
+                <input type="tel" data-key="number" class="input" placeholder="Enter Phone number here(Do not mention +91)">
+            </label>
+            <span data-error="no-error" class="error-message">
+                Invalid number
+            </span>
+            <span class="empty-field">*Please fill this field</span>
+        </div>
+
+        <div class="pwd-container">
+            <label class="pass">Password
+                <div class="btn-wrap">
+                <input type="password" data-key="pass" class="input" placeholder="Enter Password here">
+                <button class="btn" id="showPasswordBtn">
+                    <span class="material-icons-outlined" id="icon">
+                        visibility
+                    </span>
+                </button>
+                </div>
+            </label>
+            <span data-error="pw-error" class="error-message" >
+                <ul>
+                    <li class="list">
+                        Password must contain at least 8 characters
+                    </li>
+                    <li class="list">
+                        Password must contain at least 1 lowercase character
+                    </li>
+                    <li class="list">
+                        Password must contain at least 1 uppercase character
+                    </li>
+                    <li class="list">
+                        Password must contain at least 1 digit
+                    </li>
+                    <li class="list">
+                        Password must contain at least 1 special character(!@#$%&*)
+                    </li>
+                </ul>
+            </span>
+            <span class="empty-field">*Please fill this field</span>
+        </div>
+        <div class="submit-container">
+          <button class="submit">Login</button>
+        </div>
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>
